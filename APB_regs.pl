@@ -28,7 +28,6 @@ while ($line = <READ_FILE>) {
 	# printf "@type \n";
 	if ($type[3] ne "MSB") 
 	{
-	printf "Num   $num      \t ";
 	$RegNum[$num]     = $type[0];
 	$RegAdd[$num]     = $type[1];
 	$RegName[$num]    = $type[2];
@@ -88,8 +87,6 @@ printf WRITE_FILE "    );                                                       
 
 $OldAdd ;
 foreach $num (@RegNum){
-print  "$num $RegAdd[$num] next \n" ;
-	
 	if ($num > 0) { 
 		if($OldAdd ne $RegAdd[$num]){
 printf WRITE_FILE "\n";
